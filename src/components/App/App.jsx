@@ -1,7 +1,11 @@
-import './App.css'
+import AgeCounter from '../AgeCounter/AgeCounter'
 
 function App() {
-  return <></>
+  return (
+    <>
+      <AgeCounter></AgeCounter>
+    </>
+  )
 }
 
 export default App
