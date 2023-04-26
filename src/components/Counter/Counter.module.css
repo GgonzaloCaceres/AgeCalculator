@@ -1,0 +1,12 @@
+.Counter {
+  display: flex;
+}
+
+.Numbers {
+  margin: 0;
+  color: var(--primary-purple);
+}
+
+.Message {
+  color: var(--off-black);
+}

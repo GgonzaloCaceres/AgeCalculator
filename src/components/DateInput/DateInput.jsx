@@ -1,4 +1,4 @@
-import styles from './DateInput.module.css'
+import style from './DateInput.module.css'
 
 const DateInput = ({ type }) => {
   const DATE_INPUT_TYPES = {
@@ -20,11 +20,11 @@ const DateInput = ({ type }) => {
     ? DATE_INPUT_TYPES[type]
     : {}
   return (
-    <>
+    <div className={style.inputCombo}>
       <label htmlFor="dateImport">{Label}</label>
       <input id="dateImport" placeholder={PlaceHolder}></input>
       <span></span>
-    </>
+    </div>
   )
 }
 

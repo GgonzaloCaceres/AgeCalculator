@@ -5,8 +5,15 @@ import styles from './AgeCounter.module.css'
 const AgeCounter = () => {
   return (
     <div className={styles.AgeCounter}>
-      <InputsArea> </InputsArea>
-      <CountersArea></CountersArea>
+      <main>
+        <InputsArea> </InputsArea>
+        <section className={styles.button}>
+          <div>
+            <img src="./icon-arrow.svg"></img>
+          </div>
+        </section>
+        <CountersArea></CountersArea>
+      </main>
     </div>
   )
 }

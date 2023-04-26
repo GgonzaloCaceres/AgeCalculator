@@ -1,0 +1,8 @@
+.CountersArea {
+  display: flex;
+  flex-direction: column;
+  font-size: 55px;
+  font-weight: 800;
+  font-style: italic;
+  margin-top: 20px;
+}

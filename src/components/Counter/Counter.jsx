@@ -1,9 +1,11 @@
-const Counter = () => {
+import style from './Counter.module.css'
+
+const Counter = ({ message = '--' }) => {
   return (
-    <div>
-      <p>--</p>
-      <span>--</span>
-    </div>
+    <article className={style.Counter}>
+      <p className={style.Numbers}>--</p>
+      <span className={style.Message}>{message}</span>
+    </article>
   )
 }
 

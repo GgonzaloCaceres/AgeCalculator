@@ -1,8 +1,8 @@
 import DateInput from '../DateInput/DateInput'
-import styles from './InputsArea.module.css'
+import style from './InputsArea.module.css'
 
 const InputsArea = () => (
-  <div>
+  <div className={style.InputsArea}>
     <DateInput type="Day"></DateInput>
     <DateInput type="Month"></DateInput>
     <DateInput type="Year"></DateInput>
