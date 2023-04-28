@@ -22,7 +22,7 @@ const DateInput = ({ type }) => {
   return (
     <div className={style.inputCombo}>
       <label htmlFor="dateImport">{Label}</label>
-      <input id="dateImport" type="number" placeholder={PlaceHolder}></input>
+      <input id="dateImport" type="text" placeholder={PlaceHolder}></input>
       <span></span>
     </div>
   )

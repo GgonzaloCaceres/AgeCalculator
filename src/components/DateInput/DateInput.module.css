@@ -13,8 +13,15 @@
 }
 
 .inputCombo input {
+  appearance: textfield;
   font-size: 32px;
   border-width: 1px;
   border-color: var(--off-grey);
   border-radius: 5px;
+  padding: 0 10px;
+}
+
+::placeholder {
+  font-size: 23px;
+  font-weight: bold;
 }
