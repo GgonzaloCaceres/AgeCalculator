@@ -7,11 +7,6 @@ const AgeCounter = () => {
     <div className={styles.AgeCounter}>
       <main>
         <InputsArea> </InputsArea>
-        <section className={styles.button}>
-          <div>
-            <img src="./icon-arrow.svg"></img>
-          </div>
-        </section>
         <CountersArea></CountersArea>
       </main>
     </div>
