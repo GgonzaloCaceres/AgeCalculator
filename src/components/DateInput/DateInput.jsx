@@ -1,4 +1,5 @@
 import style from './DateInput.module.css'
+import useCalculator from '../../hooks/useCalculator'
 import { useState } from 'react'
 
 const DATE_INPUT_TYPES = {
@@ -17,14 +18,12 @@ const DATE_INPUT_TYPES = {
 }
 const DateInput = ({ type, setter }) => {
   const [inputValue, setInputValue] = useState('')
+  const [errorMessage, setErrorMessage] = useState('')
+  const { handleValidation } = useCalculator()
   const { Label, PlaceHolder } = DATE_INPUT_TYPES[type]
     ? DATE_INPUT_TYPES[type]
     : {}
 
-  const handleChange = event => {
-    setInputValue(event.target.value)
-    console.log(event.target.name)
-  }
   return (
     <div className={style.inputCombo}>
       <label htmlFor="dateImport">{Label}</label>
@@ -33,10 +32,13 @@ const DateInput = ({ type, setter }) => {
         id="dateImport"
         type="text"
         placeholder={PlaceHolder}
-        onChange={handleChange}
+        onChange={({ target: { value } }) => {
+          setInputValue(value)
+          setErrorMessage(() => handleValidation(value, Label))
+        }}
         value={inputValue}
       ></input>
-      <span></span>
+      <span className={style.errorMessage}>{errorMessage}</span>
     </div>
   )
 }

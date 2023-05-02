@@ -1,10 +1,10 @@
 import styles from './AgeCounter.module.css'
 import CountersArea from '../CountersArea/CountersArea'
 import DateInput from '../DateInput/DateInput'
-import UseCalculator from '../../hooks/UseCalculator'
+import useCalculator from '../../hooks/useCalculator'
 
 const AgeCounter = () => {
-  const [passedTime, handleCalculation] = UseCalculator()
+  const { passedTime, handleCalculation } = useCalculator()
   return (
     <div className={styles.AgeCounter}>
       <main>

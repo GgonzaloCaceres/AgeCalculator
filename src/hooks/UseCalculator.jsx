@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const UseCalculator = () => {
+const useCalculator = () => {
   const [passedTime, setPassedTime] = useState({
     YEAR: '--',
     MONTH: '--',
@@ -19,8 +19,8 @@ const UseCalculator = () => {
     const givenDate = new Date(
       [inputValues.Year] + '-' + [inputValues.Month] + '-' + [inputValues.Day]
     )
-    const currentDate = new Date()
 
+    const currentDate = new Date()
     const timeDiff = Math.abs(currentDate.getTime() - givenDate.getTime())
     const years = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 365.25))
     const months = Math.floor((timeDiff / (1000 * 60 * 60 * 24 * 30.44)) % 12)
@@ -36,7 +36,24 @@ const UseCalculator = () => {
 
     setPassedTime({ years, months, days })
   }
-  return [passedTime, handleCalculation]
+
+  const handleValidation = (value, Label) => {
+    if (
+      Label === 'YEAR' &&
+      (value.length !== 4 || value < 1000 || value > 9999)
+    ) {
+      return 'Incorrect year value'
+    }
+    if (Label === 'MONTH' && (value.length > 2 || value < 1 || value > 12)) {
+      return 'Incorrect month value'
+    }
+    if (Label === 'DAY' && (value.length > 2 || value < 1 || value > 31)) {
+      return 'Incorrect day value'
+    }
+    return ''
+  }
+
+  return { passedTime, handleCalculation, handleValidation }
 }
 
-export default UseCalculator
+export default useCalculator
