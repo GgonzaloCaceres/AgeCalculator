@@ -9,21 +9,15 @@ const UseCalculator = () => {
 
   const handleCalculation = event => {
     event.preventDefault()
-    const inputsArray = [...event.target].filter(
-      element => element.nodeName === 'INPUT'
-    )
-    const valueObjects = inputsArray.map(input => {
-      return { [input.name]: input.value }
-    })
-    console.log(valueObjects)
-    const inputValues = valueObjects.reduce((acc, valueObject) => {
-      const key = Object.keys(valueObject)[0]
-      acc[key] = valueObject[key]
-      return acc
-    }, {})
+
+    const inputValues = {
+      Day: event.target.DAY.value,
+      Month: event.target.MONTH.value,
+      Year: event.target.YEAR.value
+    }
 
     const givenDate = new Date(
-      [inputValues.YEAR] + '-' + [inputValues.MONTH] + '-' + [inputValues.DAY]
+      [inputValues.Year] + '-' + [inputValues.Month] + '-' + [inputValues.Day]
     )
     const currentDate = new Date()
 
@@ -40,7 +34,7 @@ const UseCalculator = () => {
         ? daysPassed - monthsPassedInDays
         : Math.floor((timeDiff / (1000 * 60 * 60 * 24)) % 30.44)
 
-    setPassedTime({ YEAR: years, MONTH: months, DAY: days })
+    setPassedTime({ years, months, days })
   }
   return [passedTime, handleCalculation]
 }
