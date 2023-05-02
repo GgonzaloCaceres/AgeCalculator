@@ -5,14 +5,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--Off-white);
+  background-color: var(--off-white);
 }
 
 .AgeCounter main {
   padding: 40px;
   width: 450px;
   height: 320px;
-  background-color: var(--White);
+  background-color: var(--white);
   border-radius: 5% 5% 33% 5%;
 }
 
@@ -21,7 +21,7 @@
   position: relative;
   justify-content: flex-end;
   margin: 30px 0;
-  border-bottom: 1px solid var(--Light-grey);
+  border-bottom: 1px solid var(--light-grey);
 }
 
 .buttonSection button {
@@ -35,10 +35,11 @@
   padding: 5px;
   background-color: var(--primary-purple);
   border-radius: 50%;
+  transition: background-color 100ms ease;
 }
 
 .buttonSection button:hover {
-  background-color: var(--Off-black);
+  background-color: var(--off-black);
   cursor: pointer;
 }
 

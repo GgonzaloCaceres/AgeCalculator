@@ -1,12 +1,13 @@
 import Counter from '../Counter/Counter'
 import styles from './CountersArea.module.css'
 
-const CountersArea = () => {
+const CountersArea = ({ date }) => {
+  const { DAY, MONTH, YEAR } = date
   return (
     <section className={styles.CountersArea}>
-      <Counter message="years"></Counter>
-      <Counter message="months"></Counter>
-      <Counter message="days"></Counter>
+      <Counter value={YEAR} message="years"></Counter>
+      <Counter value={MONTH} message="months"></Counter>
+      <Counter value={DAY} message="days"></Counter>
     </section>
   )
 }
