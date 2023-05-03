@@ -26,7 +26,7 @@ It's a project based on the frontend mentor challange [AgeCalculator](https://ww
 
 🛠 The app was built entirely using React.
 
-❗ Due that it doesn't utilize any external library to do the calculations, it has a error range of a few days in some cases.
+❗ Due that it doesn't utilize any external library to do the calculations, it has an error range of a few days in some cases.
 
 <h3>Usage:</h3>
 
