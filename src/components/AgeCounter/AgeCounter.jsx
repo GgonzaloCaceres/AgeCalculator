@@ -8,6 +8,8 @@ const AgeCounter = () => {
 
   return (
     <div className={styles.AgeCounter}>
+      <div className={styles.block}></div>
+      <div className={styles.effect}></div>
       <main>
         <form
           id="dateForm"

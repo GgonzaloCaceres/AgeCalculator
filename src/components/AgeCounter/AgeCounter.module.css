@@ -6,15 +6,20 @@
   align-items: center;
   flex-direction: column;
   background-color: var(--off-white);
+  overflow: hidden;
+  position: relative;
 }
 
 .AgeCounter main {
+  position: absolute;
+  z-index: 20;
   padding: 40px;
   width: 450px;
   height: 320px;
   background-color: var(--white);
+  border: 1px solid var(--light-grey);
   border-radius: 5% 5% 33% 5%;
-  box-shadow: 9px 5px 20px 0px var(--light-grey);
+  box-shadow: 4px 6px 20px 0px var(--light-grey);
 }
 
 .buttonSection {
@@ -34,13 +39,13 @@
   min-width: 55px;
   min-height: 55px;
   padding: 5px;
-  background-color: var(--primary-purple);
+  background: linear-gradient(var(--primary-purple), #5b21b6);
   border-radius: 50%;
-  transition: background-color 100ms ease;
+  transition: background 100ms ease;
 }
 
 .buttonSection button:hover {
-  background-color: var(--off-black);
+  background: linear-gradient(var(--off-black), #484848);
   cursor: pointer;
 }
 
@@ -51,4 +56,44 @@
 .InputsArea {
   display: flex;
   margin-bottom: 20px;
+}
+
+.block {
+  background: linear-gradient(
+    45deg,
+    grey,
+    rgb(255, 255, 255),
+    #cbd5e1,
+    #475569
+  );
+  width: 100%;
+  height: 100%;
+  -webkit-mask: linear-gradient(90deg, #000 2px, transparent 0),
+    linear-gradient(0deg, #000 1px, transparent 0);
+  -webkit-mask-size: 60px 60px;
+  background-size: 400%;
+  animation: growing 20s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes growing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.effect {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(transparent, #eaeaea 90%);
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
 }

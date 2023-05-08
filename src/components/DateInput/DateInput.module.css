@@ -23,6 +23,13 @@
   cursor: pointer;
 }
 
+.inputCombo input::-webkit-outer-spin-button,
+.inputCombo input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 ::placeholder {
   font-size: 21px;
   font-weight: 600;
@@ -43,4 +50,16 @@
   position: absolute;
   transform: translateY(110%);
   bottom: 0;
+}
+
+@keyframes growing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }

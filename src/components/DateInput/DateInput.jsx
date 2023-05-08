@@ -30,7 +30,7 @@ const DateInput = ({ type, setter }) => {
       <input
         name={Label}
         id="dateImport"
-        type="text"
+        type="number"
         placeholder={PlaceHolder}
         onChange={({ target: { value } }) => {
           setInputValue(value)
