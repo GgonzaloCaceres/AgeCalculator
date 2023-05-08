@@ -1,5 +1,6 @@
 :root {
   --primary-purple: hsl(259, 100%, 65%);
+  --secondary-purple: hsl(263, 69%, 42%);
   --error-red: hsl(0, 100%, 67%);
   --white: hsl(0, 0%, 100%);
   --off-white: hsl(0, 0%, 94%);

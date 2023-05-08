@@ -16,7 +16,7 @@ const AgeCounter = () => {
           className={styles.InputsArea}
           onSubmit={handleCalculation}
         >
-          <DateInput type="Day"></DateInput>
+          <DateInput autoFocus type="Day"></DateInput>
           <DateInput type="Month"></DateInput>
           <DateInput type="Year"></DateInput>
         </form>

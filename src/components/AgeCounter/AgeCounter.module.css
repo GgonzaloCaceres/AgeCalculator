@@ -49,6 +49,9 @@
   cursor: pointer;
 }
 
+.buttonSection button:focus {
+  background: linear-gradient(var(--off-black), #484848);
+}
 .buttonSection button img {
   max-width: 30px;
 }

@@ -1,12 +1,14 @@
-.Counter {
+.counter {
   display: flex;
 }
 
-.Numbers {
+.numbers {
   margin: 0;
-  color: var(--primary-purple);
+  background: linear-gradient(var(--primary-purple), var(--secondary-purple));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.Message {
+.message {
   color: var(--off-black);
 }

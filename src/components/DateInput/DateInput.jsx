@@ -16,7 +16,7 @@ const DATE_INPUT_TYPES = {
     PlaceHolder: 'YYYY'
   }
 }
-const DateInput = ({ type, setter }) => {
+const DateInput = ({ type, ...props }) => {
   const [inputValue, setInputValue] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
   const { handleValidation } = useCalculator()
@@ -28,6 +28,7 @@ const DateInput = ({ type, setter }) => {
     <div className={style.inputCombo}>
       <label htmlFor="dateImport">{Label}</label>
       <input
+        {...props}
         name={Label}
         id="dateImport"
         type="number"
