@@ -1,11 +1,5 @@
 import AgeCounter from '../AgeCounter/AgeCounter'
 
-function App() {
-  return (
-    <>
-      <AgeCounter></AgeCounter>
-    </>
-  )
-}
+const App = () => <AgeCounter />
 
 export default App

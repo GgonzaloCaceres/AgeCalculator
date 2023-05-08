@@ -5,6 +5,7 @@ import useCalculator from '../../hooks/useCalculator'
 
 const AgeCounter = () => {
   const { passedTime, handleCalculation } = useCalculator()
+
   return (
     <div className={styles.AgeCounter}>
       <main>
