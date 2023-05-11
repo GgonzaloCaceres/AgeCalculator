@@ -1,43 +1,15 @@
 import style from './DateInput.module.css'
-import useCalculator from '../../hooks/useCalculator'
-import { useState } from 'react'
 
-const DATE_INPUT_TYPES = {
-  Day: {
-    Label: 'DAY',
-    PlaceHolder: 'DD'
-  },
-  Month: {
-    Label: 'MONTH',
-    PlaceHolder: 'MM'
-  },
-  Year: {
-    Label: 'YEAR',
-    PlaceHolder: 'YYYY'
-  }
-}
-const DateInput = ({ type, ...props }) => {
-  const [inputValue, setInputValue] = useState('')
-  const [errorMessage, setErrorMessage] = useState('')
-  const { handleValidation } = useCalculator()
-  const { Label, PlaceHolder } = DATE_INPUT_TYPES[type]
-    ? DATE_INPUT_TYPES[type]
-    : {}
-
+const DateInput = ({ type, label, errorMessage, ...props }) => {
   return (
     <div className={style.inputCombo}>
-      <label htmlFor="dateImport">{Label}</label>
+      <label htmlFor="dateImport">{label}</label>
       <input
-        {...props}
-        name={Label}
+        autoComplete="off"
+        name={label}
         id="dateImport"
+        {...props}
         type="number"
-        placeholder={PlaceHolder}
-        onChange={({ target: { value } }) => {
-          setInputValue(value)
-          setErrorMessage(() => handleValidation(value, Label))
-        }}
-        value={inputValue}
       ></input>
       <span className={style.errorMessage}>{errorMessage}</span>
     </div>
