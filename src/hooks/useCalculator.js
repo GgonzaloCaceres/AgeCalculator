@@ -6,7 +6,6 @@ const useCalculator = () => {
     MONTH: '--',
     DAY: '--'
   })
-
   const handleCalculation = event => {
     event.preventDefault()
 
@@ -37,23 +36,7 @@ const useCalculator = () => {
     setPassedTime({ years, months, days })
   }
 
-  const handleValidation = (value, Label) => {
-    if (
-      Label === 'YEAR' &&
-      (value.length !== 4 || value < 1000 || value > 9999)
-    ) {
-      return 'Incorrect year value'
-    }
-    if (Label === 'MONTH' && (value.length > 2 || value < 1 || value > 12)) {
-      return 'Incorrect month value'
-    }
-    if (Label === 'DAY' && (value.length > 2 || value < 1 || value > 31)) {
-      return 'Incorrect day value'
-    }
-    return ''
-  }
-
-  return { passedTime, handleCalculation, handleValidation }
+  return { passedTime, handleCalculation }
 }
 
 export default useCalculator
