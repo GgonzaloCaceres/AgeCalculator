@@ -14,8 +14,6 @@ Para calcular el tiempo transcurrido se deberá introducir la fecha en el formul
 
 <h3>Proximas características<h3>
 
-▶ Incorporacion de la librería Moment.js para quitar el margen de error en los calculos realizados.
-
 ▶ Incorporacion de animaciones en el renderizado de los numeros con el fin de obtener un efecto de conteo a la hora de mostrar los resultados.
 
 <h1 style:"text-align:center">AgeCalculator</h1>
@@ -30,10 +28,8 @@ It's a project based on the frontend mentor challange [AgeCalculator](https://ww
 
 <h3>Usage:</h3>
 
-In order to calculate the time elapsed you should introduced the date in the initial form, which should follow the correct format of Day, Month and year and press the bottom bellow to perform the calculation.
+In order to calculate the time elapsed you should introduced the date in the initial form, which should follow the correct format of Day, Month and Year and press the bottom bellow to perform the calculation.
 
 <h3>Future features<h3>
-
-▶ Incorporation of the library Moment.js to eliminate the error range in the calculations.
 
 ▶ Incorporation of animations in the rendered results in order to add a counting effect.
