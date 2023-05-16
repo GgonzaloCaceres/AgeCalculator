@@ -15,6 +15,7 @@
   z-index: 20;
   padding: 40px;
   width: 450px;
+  max-width: 60vw;
   height: 320px;
   background-color: var(--white);
   border: 1px solid var(--light-grey);
@@ -36,8 +37,10 @@
   position: absolute;
   right: 0;
   transform: translateY(-50%);
-  min-width: 55px;
-  min-height: 55px;
+  width: 55px;
+  max-width: 14vw;
+  height: 55px;
+  max-height: 14vw;
   padding: 5px;
   background: linear-gradient(var(--primary-purple), #5b21b6);
   border-radius: 50%;
@@ -102,4 +105,15 @@
   position: absolute;
   left: 0;
   top: 0;
+}
+
+@media (width <=450px) {
+  .AgeCounter main {
+    width: 60vw;
+  }
+
+  .buttonSection button {
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
 }

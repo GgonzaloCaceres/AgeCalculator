@@ -6,3 +6,9 @@
   font-style: italic;
   margin-top: 20px;
 }
+
+@media (width<= 450px) {
+  .CountersArea {
+    font-size: 12vw;
+  }
+}
